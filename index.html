@@ -1,19 +1,29 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Kakao 지도 시작하기</title>
+	<title>사회적 거리두기</title>
 </head>
 <body>
-	<div id="map" style="width:500px;height:400px;"></div>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2ba1950340956f0a9ffc6757d46adcd0"></script>
+	<div id="map" style="width:800px;height:600px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=18fe91f5a7cd58732a15f7ebd62daa41"></script>
 	<script>
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
+			center: new kakao.maps.LatLng(35.871389, 128.601389),
+			level: 8
 		};
 
 		var map = new kakao.maps.Map(container, options);
+        var markerPosition  = new kakao.maps.LatLng(35.8171856274443, 128.523655086414);
+
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+    marker.setMap(map);
 	</script>
+    <p>
+        달서구 진천로 92
+    </p>
 </body>
 </html>
